@@ -10,9 +10,52 @@
   url('fonts/FuturaLT-Heavy.ttf') format('truetype');
 }
 /*Start*/
+/*Removes scrollbar*/
+::-webkit-scrollbar {
+  display: none;
+}
 body {
+  background-color: pink;
   padding: 0;
   margin: 0;
-  margin-bottom: 150px;
   font-family: 'custom_normal', Arial, sans-serif;
+  text-align: center;
+}
+#a{
+  width:100%;
+  background-color: blue;
+  height:100vh;
+}
+#left{
+  width:25%;
+  background-color: orange;
+  height:50vh;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float:left;
+}
+#center{
+  width:50%;
+  background-color: green;
+  height:50vh;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float:left;
+}
+#right{
+  width:25%;
+  background-color: yellow;
+  height:50vh;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float:left;
+}
+footer {
+  width:100%;
+  background-color: white;
+  height:20vh;
+  display: inline-block;
 }
