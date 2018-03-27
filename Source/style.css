@@ -9,11 +9,12 @@
   src:
   url('fonts/FuturaLT-Heavy.ttf') format('truetype');
 }
-/*Start*/
 /*Removes scrollbar*/
 ::-webkit-scrollbar {
   display: none;
 }
+
+/*Start*/
 body {
   background-color: pink;
   padding: 0;
@@ -21,12 +22,14 @@ body {
   font-family: 'custom_normal', Arial, sans-serif;
   text-align: center;
 }
-#a{
+#a {
   width:100%;
   background-color: blue;
   height:100vh;
 }
-#left{
+
+/*Aside leftside*/
+aside#left {
   width:25%;
   background-color: orange;
   height:50vh;
@@ -34,8 +37,26 @@ body {
   padding: 0;
   margin: 0;
   float:left;
+  align-content: center;
 }
-#center{
+aside#left section.example {
+  background-color: red;
+  width:85%;
+  height:100%;
+  margin: 0;
+  display: inline-block;
+}
+aside#left section.example article.title {
+  background-color: white;
+  width:85%;
+  margin:5px;
+  height:50px;
+  margin: 5px;
+  display: inline-block;
+}
+
+/*Main center*/
+main#center {
   width:50%;
   background-color: green;
   height:50vh;
@@ -44,7 +65,27 @@ body {
   margin: 0;
   float:left;
 }
-#right{
+main#center section.title {
+  margin: 5px;
+  background-color: red;
+  height:50px;
+  width:35%;
+  display: block;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+main#center section.content {
+  margin: 5px;
+  background-color: blue;
+  height:50px;
+  width:100%;
+  display: block;
+  margin-top: 20px;
+  margin-left: 0px;
+}
+
+/*Aside rightside*/
+aside#right {
   width:25%;
   background-color: yellow;
   height:50vh;
@@ -53,9 +94,42 @@ body {
   margin: 0;
   float:left;
 }
+aside#right section.example {
+  background-color: black;
+  width:85%;
+  height:100%;
+  margin: 0;
+  display: inline-block;
+}
+aside#right section.example article.title {
+  background-color: orange;
+  width:85%;
+  margin:5px;
+  height:50px;
+  margin: 5px;
+  display: inline-block;
+}
+
+/*Footer*/
 footer {
   width:100%;
   background-color: white;
   height:20vh;
+  display: inline-block;
+  align-content:center;
+}
+section#logo{
+  height:100px;
+  width:100px;
+  background-color: black;
+  float:right;
+  right: 10px;
+  bottom: 10px;
+}
+footer section#content{
+  width:50%;
+  height:10px;
+  background-color: black;
+  margin:25px;
   display: inline-block;
 }
