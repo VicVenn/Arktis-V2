@@ -1,0 +1,18 @@
+/*Fonts*/
+@font-face {
+  font-family: 'custom_normal';
+  src:
+  url('fonts/FuturaLT-Book.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'custom_heavy';
+  src:
+  url('fonts/FuturaLT-Heavy.ttf') format('truetype');
+}
+/*Start*/
+body {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 150px;
+  font-family: 'custom_normal', Arial, sans-serif;
+}
