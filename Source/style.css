@@ -127,15 +127,15 @@ body {
 }
 
 /*Nav*/
+
 nav {
   background-color: purple;
   position: absolute;
-  top:0;
-  height:50px;
-  width:100vw;
+  top: 0;
+  height: 50px;
+  width: 100vw;
   z-index: 99999;
 }
-
 
 /*Aside leftside*/
 
@@ -290,7 +290,7 @@ footer section#content {
 #error_button:hover {
   background-color: green;
 }
-
+/*Tablets*/
 @media only screen and (max-width:768px) {
   #parallax {
     height: 100vh;
@@ -308,34 +308,77 @@ footer section#content {
   .parallax__cover div#container {
     margin-top: 150px;
   }
-
   /*Aside leftside*/
   aside#left {
     width: 33vw;
   }
-  aside#left section.example {
-  }
-  aside#left section.example article.title {
-  }
   /*Center main*/
   main#center {
     width: 66vw;
-    padding:0;
+    padding: 0;
   }
-
+  main#center section.title {
+    margin-right: 0px;
+    float: right;
+  }
+  main#center section.content {
+    margin-right: 0px;
+    float: right;
+  }
   /*Aside rightside*/
   aside#right {
     width: 100%;
   }
   aside#right section.example {
-    background-color: black;
     width: 85%;
     height: 100%;
     margin: 0;
     display: inline-block;
   }
   aside#right section.example article.title {
-    background-color: orange;
+    width: 50%;
+    margin: 5px;
+    margin-top: 10px;
+  }
+}
+
+
+@media only screen and (max-width:600px) {
+  /*Nav*/
+  nav {
+    top:auto;
+    bottom: 0;
+    left: 0;
+    margin-bottom:0;
+  }
+  /*Aside leftside*/
+  aside#left {
+    width: 100vw;
+  }
+  /*Center main*/
+  main#center {
+    width: 100vw;
+    padding: 0;
+  }
+  main#center section.title {
+    margin-right: 0px;
+    float: right;
+  }
+  main#center section.content {
+    margin-right: 0px;
+    float: right;
+  }
+  /*Aside rightside*/
+  aside#right {
+    width: 100%;
+  }
+  aside#right section.example {
+    width: 85%;
+    height: 100%;
+    margin: 0;
+    display: inline-block;
+  }
+  aside#right section.example article.title {
     width: 50%;
     margin: 5px;
     margin-top: 10px;
