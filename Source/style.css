@@ -29,7 +29,6 @@
 }
 
 .parallax__cover {
-  background: pink;
   display: block;
   position: absolute;
   top: 80%;
@@ -40,6 +39,8 @@
 
 .parallax__cover div#container {
   margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .parallax__layer__0 {
@@ -118,69 +119,62 @@
 
 /*Start*/
 
+* {
+  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.1);
+}
+
 body {
-  background-color: white;
-  padding: 0;
-  margin: 0;
   font-family: 'custom_normal', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 /*Nav*/
 
 nav {
-  background-color: purple;
+  height: 50px;
   position: absolute;
   top: 0;
-  height: 50px;
   width: 100vw;
   z-index: 99999;
 }
 
-/*Aside leftside*/
-
-aside#left {
-  width: 25%;
-  background-color: orange;
-  height: 50vh;
-  display: block;
-  padding: 0;
-  margin: 0;
-  float: left;
-  align-content: center;
+.flex-row {
+  display: flex;
+  flex-direction: row
 }
 
-aside#left section.example {
-  background-color: red;
+/*Aside leftside*/
+
+.left {
+  width: 25%;
+}
+
+.left section.example {
+  top: 50px;
   width: 85%;
   height: 100%;
   margin: 0;
   display: inline-block;
 }
 
-aside#left section.example article.title {
-  background-color: white;
+.left section.example article.title {
   width: 85%;
   margin: 5px;
   height: 50px;
-  margin: 5px;
   display: inline-block;
 }
 
 /*Main center*/
 
-main#center {
+.center {
   width: 50%;
-  background-color: green;
-  display: block;
-  padding: 0;
-  margin: 0;
-  float: left;
 }
 
-main#center section.title {
+.center section.title {
   margin: 5px;
-  background-color: red;
   height: 50px;
   width: 35%;
   display: block;
@@ -188,42 +182,32 @@ main#center section.title {
   margin-left: 0px;
 }
 
-main#center section.content {
+.center section.content {
   margin: 5px;
-  background-color: blue;
   height: 50px;
   width: 100%;
   display: block;
   margin-top: 20px;
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 /*Aside rightside*/
 
-aside#right {
+.right {
   width: 25%;
-  background-color: yellow;
-  height: 50vh;
-  display: block;
-  padding: 0;
-  margin: 0;
-  float: left;
 }
 
-aside#right section.example {
-  background-color: black;
+.right section.example {
   width: 85%;
   height: 100%;
   margin: 0;
   display: inline-block;
 }
 
-aside#right section.example article.title {
-  background-color: orange;
+.right section.example article.title {
   width: 85%;
   margin: 5px;
   height: 50px;
-  margin: 5px;
   display: inline-block;
 }
 
@@ -231,27 +215,17 @@ aside#right section.example article.title {
 
 footer {
   width: 100%;
-  background-color: white;
   height: 20vh;
-  display: inline-block;
-  align-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 section#logo {
   height: 100px;
   width: 100px;
-  background-color: black;
   position: absolute;
   top: 10px;
   right: 10px;
-}
-
-footer section#content {
-  width: 50%;
-  height: 10px;
-  background-color: black;
-  margin: 25px;
-  display: inline-block;
 }
 
 /*Error*/
@@ -290,7 +264,9 @@ footer section#content {
 #error_button:hover {
   background-color: green;
 }
+
 /*Tablets*/
+
 @media only screen and (max-width:768px) {
   #parallax {
     height: 100vh;
@@ -305,7 +281,7 @@ footer section#content {
     right: 0;
     z-index: 2;
   }
-  .parallax__cover div#container {
+  .parallax__cover #container {
     margin-top: 150px;
   }
   /*Aside leftside*/
@@ -342,14 +318,13 @@ footer section#content {
   }
 }
 
-
 @media only screen and (max-width:600px) {
   /*Nav*/
   nav {
-    top:auto;
+    top: auto;
     bottom: 0;
     left: 0;
-    margin-bottom:0;
+    margin-bottom: 0;
   }
   /*Aside leftside*/
   aside#left {
@@ -383,9 +358,7 @@ footer section#content {
     margin: 5px;
     margin-top: 10px;
   }
-
   /*Error*/
-
   #error_spinner {
     margin-top: 20vh;
     height: 100px;
@@ -396,7 +369,6 @@ footer section#content {
     height: 100px;
     width: 80vw;
   }
-
   #error_button {
     margin-top: 20px;
     height: 30px;
