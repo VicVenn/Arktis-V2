@@ -1,4 +1,4 @@
-/*Fonts*/
+/*Fonts*//*Fonts*/
 @font-face {
   font-family: 'custom_normal';
   src:
@@ -16,16 +16,11 @@
 
 /*Start*/
 body {
-  background-color: pink;
+  background-color: white;
   padding: 0;
   margin: 0;
   font-family: 'custom_normal', Arial, sans-serif;
   text-align: center;
-}
-#a {
-  width:100%;
-  background-color: blue;
-  height:100vh;
 }
 
 /*Aside leftside*/
@@ -59,7 +54,6 @@ aside#left section.example article.title {
 main#center {
   width:50%;
   background-color: green;
-  height:50vh;
   display: block;
   padding: 0;
   margin: 0;
@@ -123,7 +117,7 @@ section#logo{
   width:100px;
   background-color: black;
   position: absolute;
-  bottom: 10px; right:10px;
+  top: 10px; right:10px;
 }
 footer section#content{
   width:50%;
@@ -131,4 +125,132 @@ footer section#content{
   background-color: black;
   margin:25px;
   display: inline-block;
+}
+
+/*Error*/
+#error_spinner {
+  margin-top:35vh;
+  height:100px;
+  width:100px;
+  background-color: black;
+  display: inline-block;
+  animation: load_screen_loader 2s infinite ease;
+}
+@keyframes load_screen_loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#error_message {
+  margin-top:20px;
+  height:100px;
+  width:50vw;
+  background-color: black;
+  display: inline-block;
+}
+#error_button {
+  margin-top:20px;
+  height:30px;
+  width:65px;
+  background-color: black;
+  display: inline-block;
+}
+#error_button:hover {
+  background-color: green;
+}
+
+
+#parallax {
+  -webkit-perspective: 100px;
+          perspective: 100px;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.parallax__layer img {
+  display: block;
+  position: absolute;
+  bottom: 0;
+}
+
+.parallax__cover {
+  background: pink;
+  display: block;
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+.parallax__cover div#container{
+  margin-top:20vh;
+}
+
+.parallax__layer__0 {
+  -webkit-transform: translateZ(-300px) scale(4);
+          transform: translateZ(-300px) scale(4);
+          width:100vw;
+          background-color: black;
+          height: 100px;
+}
+
+.parallax__layer__1 {
+width:100vw;
+height: 100px;
+  -webkit-transform: translateZ(-250px) scale(3.5);
+          transform: translateZ(-250px) scale(3.5);
+          background-color: gray;
+}
+
+.parallax__layer__2 {
+width:100vw;
+height: 100px;
+  -webkit-transform: translateZ(-200px) scale(3);
+          transform: translateZ(-200px) scale(3);
+          background-color: black;
+}
+
+.parallax__layer__3 {
+width:100vw;
+height: 100px;
+  -webkit-transform: translateZ(-150px) scale(2.5);
+          transform: translateZ(-150px) scale(2.5);
+          background-color: gray;
+}
+
+.parallax__layer__4 {
+width:100vw;
+height: 100px;
+  -webkit-transform: translateZ(-100px) scale(2);
+          transform: translateZ(-100px) scale(2);
+          background-color: black;
+}
+
+.parallax__layer__5 {
+width:100vw;
+height: 100px;
+  -webkit-transform: translateZ(-50px) scale(1.5);
+          transform: translateZ(-50px) scale(1.5);
+          background-color: gray;
+}
+
+.parallax__layer__6 {
+width:100vw;
+height: 100px;
+  -webkit-transform: translateZ(0px) scale(1);
+          transform: translateZ(0px) scale(1);
+          background-color: black;
 }
