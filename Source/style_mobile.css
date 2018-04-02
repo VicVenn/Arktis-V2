@@ -1,0 +1,61 @@
+@media only screen and (max-width:600px) {
+  /*Nav*/
+  nav {
+    top: auto;
+    margin-bottom: 0px;
+    height: 40px;
+  }
+  .center_constrain {
+    width:80%;
+    margin:auto;
+  }
+  nav ul a {
+      font-size: 26px;
+      line-height: 24px;
+      padding:5px;
+  }
+  .right svg {
+    height:100px;
+    width:100px;
+  }
+  /*Aside leftside*/
+  .left {
+    width: 100vw;
+    position: static;
+    display: block;
+  }
+  aside.left {
+    height: auto;
+  }
+  aside.left section.example {
+    width: 80%;
+  }
+  aside.left section.example article.title {
+
+    margin: 10px 0px 10px 0px;
+  }
+  /*Center main*/
+  .center {
+    width: 100vw;
+  }
+  .center div.center_constrain section.content {
+    padding: 5px 0px 5px 0px;
+  }
+  footer {
+    padding: 35px 0px;
+  }
+  /*Aside rightside*/
+  .right {
+    width: 100%;
+  }
+  .parallax__cover div#container {
+    margin-top: 0px;
+  }
+
+  .show{
+    display: none;
+  }
+  .noshow {
+    display: block;
+  }
+}

@@ -1,0 +1,34 @@
+@media only screen and (max-width:768px) {
+  #parallax {
+    height: 100vh;
+    width: 100vw;
+  }
+  .center_constrain {
+    width:90%;
+    margin:auto;
+  }
+  .parallax__cover {
+    top: 100%;
+  }
+  .parallax__cover div#container {
+    margin-top: 0px;
+  }
+  /*Aside leftside*/
+  .left {
+    width: 25vw;
+  }
+  /*Center main*/
+  .center {
+    width: 75vw;
+  }
+  /*Aside rightside*/
+  .right {
+    width: 100%;
+  }
+  footer {
+    padding: 35px 0px 35px 0px;
+  }
+  footer.flex-row section.center {
+    width:100%;
+  }
+}
