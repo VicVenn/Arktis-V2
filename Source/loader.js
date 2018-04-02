@@ -1,4 +1,4 @@
 window.addEventListener("load", function(){
-	var load_screen = document.getElementById("load_screen");
-	document.body.removeChild(load_screen);
+	var bajs = document.getElementById("bajs");
+	document.body.removeChild(bajs);
 });
