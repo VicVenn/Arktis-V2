@@ -15,6 +15,7 @@ html {
 *, *:before, *:after {
   box-sizing: inherit
 }
+
 body, html {
   font-family: 'custom_normal', Arial, sans-serif;
   height: 100vh;
@@ -22,18 +23,22 @@ body, html {
   text-align: center;
   background-color: #14143E;
 }
+
 footer {
   padding: 35px 0px 0px 0px;
 }
+
 footer section img {
   width: 125px;
   height: 125px;
 }
-footer section a{
+
+footer section a {
   text-decoration: none;
-  color:white;
-  margin:0 2px 0 2px;
+  color: white;
+  margin: 0 2px 0 2px;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -41,27 +46,30 @@ footer section a{
 .bajs {
   background: #14143E;
   opacity: 0.9;
-  width:40%;
-  padding:10px;
-  margin: 50px 0 50px 50px;
+  width: 40%;
+  padding: 10px;
+  margin-top: 20px;
 }
+
 /* flex */
+
 .flex-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: left;
   justify-content: flex-start;
-  margin:0px 20px 0px 20px;
+  width: 100%;
 }
+
 p {
   padding: 16px 0;
-  margin:0;
+  margin: 0;
   background-color: inherit;
-  padding:0;
+  padding: 0;
 }
 
 h2 {
-  margin:0;
+  margin: 0;
 }
 
 /* color specific */
@@ -77,20 +85,23 @@ h2 {
 .text-quote {
   padding: 20px 0;
 }
+
 .text-title {
-  padding:5px;
+  padding: 5px;
   display: inline-block;
   background-color: white;
 }
+
 .text-content {
-    text-align: left;
+  text-align: left;
 }
+
 /* parallax */
 
 .parallax {
   /* Full height */
   width: auto;
-  min-height:100vh;
+  min-height: 100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -101,31 +112,37 @@ h2 {
 
 .parallax-title {
   position: absolute;
-  bottom:0;
-  right:0;
+  bottom: 0;
+  right: 0;
   text-align: right;
-  padding: 25px;
+  padding: 15px;
   max-width: 500px;
 }
-p{
+
+p {
   text-align: justify;
+  text-justify: inter-word;
 }
+
 .bg1 {
   /* The image used */
   background-image: url("images/bg1.jpg");
   min-height: 100vh;
+  padding: 50px;
 }
 
 .bg2 {
   /* The image used */
   background-image: url("images/bg2.jpg");
-  min-height: 200px;
+  min-height: 100vh;
+  padding: 50px;
 }
 
 .bg3 {
   /* The image used */
   background-image: url("images/bg3.jpg");
-  min-height: 400px;
+  min-height: 100vh;
+  padding: 50px;
 }
 
 .bg-dark {
@@ -214,10 +231,10 @@ div#loader #XMLID_5_ {
 
 .down-arrow {
   position: absolute;
-  margin:auto;
+  margin: auto;
   width: 40px;
   height: 40px;
-  bottom:0;
+  bottom: 0;
 }
 
 .animated {
@@ -253,14 +270,15 @@ div#loader #XMLID_5_ {
 }
 
 /* navigation */
+
 nav {
-    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
-    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
-    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   width: 100%;
   position: fixed;
-  top:0;
-  padding:0;
+  top: 0;
+  padding: 0;
   z-index: 99999;
   overflow: hidden;
 }
@@ -318,21 +336,24 @@ nav {
 
 #instafeed {
   width: 80%;
-  margin:auto;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 #instafeed a {
   position: relative;
   width: 50%;
   margin: 5px;
 }
+
 #instafeed a img {
   display: block;
   width: 100%;
   height: 100%;
 }
+
 #instafeed a div.footer {
   width: auto;
   position: absolute;
@@ -345,6 +366,7 @@ nav {
   color: white;
   text-transform: uppercase;
 }
+
 #instafeed a div.footer img {
   height: 40px;
   width: 40px;
@@ -352,20 +374,44 @@ nav {
   margin-right: .5rem;
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
 }
+
 #instafeed a div.user {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
+
 #instafeed a div.caption {
   height: 0;
   opacity: 0;
   margin-bottom: 0;
   background: rgba(0, 0, 0, 0.2);
 }
+
 #instafeed a:hover .caption, #instafeed a:focus .caption {
   margin: -.5rem -1rem .5rem;
   padding: .5rem 1rem;
   opacity: 1;
   height: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .bajs {
+    width: 100%;
+    margin: auto;
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .parallax-title {
+    font-size: 75%;
+  }
+  .bg1 {
+    padding-bottom: 80px;
+  }
+  .bg2 {
+    padding-bottom: 80px;
+  }
+  .bg3 {
+    padding-bottom: 80px;
+  }
 }
