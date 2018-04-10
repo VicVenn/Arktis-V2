@@ -8,28 +8,60 @@
   src: url('fonts/FuturaLT-Heavy.ttf') format('truetype');
 }
 
+html {
+  box-sizing: border-box
+}
+
+*, *:before, *:after {
+  box-sizing: inherit
+}
 body, html {
   font-family: 'custom_normal', Arial, sans-serif;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   text-align: center;
   background-color: #14143E;
-  color: white;
 }
-
+footer {
+  padding: 35px 0px 0px 0px;
+}
+footer section img {
+  width: 125px;
+  height: 125px;
+}
+footer section a{
+  text-decoration: none;
+  color:white;
+  margin:0 2px 0 2px;
+}
 ::-webkit-scrollbar {
   display: none;
 }
 
+.bajs {
+  background: #14143E;
+  opacity: 0.9;
+  width:40%;
+  padding:10px;
+  margin: 50px 0 50px 50px;
+}
+/* flex */
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin:0px 20px 0px 20px;
+}
 p {
-  padding: 16px 0px;
-  margin: 0px;
+  padding: 16px 0;
+  margin:0;
   background-color: inherit;
-  padding: 0px;
+  padding:0;
 }
 
 h2 {
-  margin: 0px;
+  margin:0;
 }
 
 /* color specific */
@@ -42,12 +74,23 @@ h2 {
   color: white;
 }
 
+.text-quote {
+  padding: 20px 0;
+}
+.text-title {
+  padding:5px;
+  display: inline-block;
+  background-color: white;
+}
+.text-content {
+    text-align: left;
+}
 /* parallax */
 
 .parallax {
   /* Full height */
-  height: 100%;
   width: auto;
+  min-height:100vh;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -58,23 +101,25 @@ h2 {
 
 .parallax-title {
   position: absolute;
-  bottom: 0px;
-  right: 0px;
+  bottom:0;
+  right:0;
   text-align: right;
   padding: 25px;
   max-width: 500px;
 }
-
+p{
+  text-align: justify;
+}
 .bg1 {
   /* The image used */
   background-image: url("images/bg1.jpg");
-  min-height: 400px;
+  min-height: 100vh;
 }
 
 .bg2 {
   /* The image used */
   background-image: url("images/bg2.jpg");
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .bg3 {
@@ -89,13 +134,9 @@ h2 {
   margin: 0;
 }
 
-div.bg-dark {
-  height: 100px;
-}
-
 /* loader */
 
-div#loader {
+#loader {
   background-color: #14143E;
   color: white;
   width: 100vw;
@@ -170,13 +211,13 @@ div#loader #XMLID_5_ {
 }
 
 /* bounce */
+
 .down-arrow {
   position: absolute;
-  margin: 0px 50px;
+  margin:auto;
   width: 40px;
   height: 40px;
-  bottom: 0px;
-  left: 0px;
+  bottom:0;
 }
 
 .animated {
@@ -211,12 +252,15 @@ div#loader #XMLID_5_ {
   transform-origin: center bottom;
 }
 
-
+/* navigation */
 nav {
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+    box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
   width: 100%;
   position: fixed;
-  top: 0px;
-  padding: 0px;
+  top:0;
+  padding:0;
   z-index: 99999;
   overflow: hidden;
 }
@@ -232,17 +276,12 @@ nav {
   text-align: center;
   padding: 5px 15px;
   text-decoration: none;
-  color:white;
+  color: white;
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
-}
-
-.active {
-  background-color: #1d1e47;
-  color: white;
 }
 
 .topnav .icon {
@@ -250,7 +289,9 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav a:not(:first-child) {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
@@ -258,7 +299,9 @@ nav {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -269,4 +312,60 @@ nav {
     display: block;
     text-align: left;
   }
+}
+
+/* instafeed */
+
+#instafeed {
+  width: 80%;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#instafeed a {
+  position: relative;
+  width: 50%;
+  margin: 5px;
+}
+#instafeed a img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+#instafeed a div.footer {
+  width: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: .5rem 1rem;
+  font-size: .8rem;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  text-transform: uppercase;
+}
+#instafeed a div.footer img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: .5rem;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.4);
+}
+#instafeed a div.user {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#instafeed a div.caption {
+  height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+#instafeed a:hover .caption, #instafeed a:focus .caption {
+  margin: -.5rem -1rem .5rem;
+  padding: .5rem 1rem;
+  opacity: 1;
+  height: auto;
 }
